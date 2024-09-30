@@ -1,0 +1,192 @@
+:root {
+  --a: 0;
+}
+
+button {
+  cursor: pointer;
+}
+/* utility  */
+.flex {
+  display: flex;
+}
+.justify-content {
+  justify-content: center;
+}
+.justify-content-space {
+  justify-content: space-between;
+}
+.align-item {
+  align-items: center;
+}
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* for testing */
+.border {
+  border: 2px solid rgb(0, 0, 0);
+}
+/* for remove .border */
+.bg-non {
+  border: none;
+}
+/* for background transparent */
+.bg0 {
+  background-color: transparent;
+}
+/* for background color */
+.bg1 {
+  background-color: #121212;
+}
+/* for background color */
+.bg2 {
+  background-color: #1f1f1f;
+}
+.bg3 {
+  background-color: #404040;
+}
+/* for change color or background color  (ex white to black ) */
+.invert {
+  filter: invert(1);
+}
+/* for all button style */
+.btn {
+  border-radius: 16px;
+  padding: 6px 19px;
+  color: rgba(0, 0, 0, 0.766);
+}
+/* for font waith 800 */
+.font-bold {
+  font-weight: 700;
+}
+/* for font wait 400 */
+.font-nobolt {
+  font-weight: 400;
+}
+/* for lightgray font */
+.font-dark {
+  color: rgba(255, 255, 255, 0.545);
+}
+.m-left {
+  margin-left: 10px;
+}
+.m-right {
+  margin-right: 20px;
+}
+.m-1 {
+  margin: 15px;
+}
+.p-1 {
+  padding: 15px;
+}
+.m-2 {
+  margin: 3px 15px;
+}
+.p-2 {
+  padding: 3px 15px;
+}
+.m-top {
+  margin-top: 60px;
+}
+.b-radius {
+  border-radius: 29px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1e1e1e;
+}
+
+.bthover:hover {
+  color: black;
+  border-radius: 16px;
+  padding: 8px 21px;
+  font-weight: bold;
+}
+
+#sidebar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding-top: 20px;
+  overflow-x: hidden;
+  transition: 0.5s; /* Smooth transition */
+  overflow-y: auto;
+}
+
+#songList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#songList li {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff; /* Text color */
+}
+
+#songList img {
+  margin: 8px 14px 8px 9px;
+  width: 50px; /* Size of album cover */
+  height: 52px;
+}
+
+.song-info {
+  position: absolute;
+  left: 71px;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  letter-spacing: 1.5px;
+  color: white;
+  font-size: 18px;
+  font-family: helvetica;
+  line-height: normal;
+  font-weight: 400;
+}
+#active-song {
+  color: green; /* Color for the currently playing song */
+}
+
+.song-artist {
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 100px;
+  color: #ffffff98; /* Lighter color for the artist name */
+}
+/* slider another */
+#seekBar {
+  -webkit-appearance: none;
+  appearance: none; /* Remove default appearance */
+  width: 100%; /* Full width */
+  height: 3px; /* Height of the track */
+  background: #ffffff; /* Background color of the track */
+  outline: none; /* Remove outline */
+  /* Rounded corners */
+}
+
+/* Style the thumb for Chrome, Safari, and Edge */
+#seekBar::-webkit-slider-thumb {
+  margin-top: 1px;
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+  cursor: pointer; /* Pointer cursor on hover */
+  height: 4px;
+  width: 15px;
+  transition: background-color 0.3s;
+}
+
+/* Change thumb color on hover for Chrome, Safari, and Edge */
+#seekBar::-webkit-slider-thumb:active {
+  background-color: #00b009; /* Darker green when dragging */
+}
+#seekBar::-webkit-slider-thumb:hover {
+  background-color: #00b009; /* Darker green when dragging */
+}

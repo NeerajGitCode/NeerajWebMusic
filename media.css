@@ -1,0 +1,252 @@
+@media (min-width: 2450px) {
+  .main-box2-nav,
+  section {
+    margin-left: 150px;
+  }
+}
+
+@media (max-width: 1900px) {
+  .content section span:nth-child(2) {
+    line-height: 22px;
+    font-size: 16px;
+  }
+  .content section span {
+    line-height: 22px;
+    font-size: 19px;
+  }
+  .now-playing h4 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .footer-top-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .btn {
+    border-radius: 15px;
+    padding: 4px 15px;
+    color: rgba(0, 0, 0, 0.766);
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .library-btn {
+    color: rgba(255, 255, 255, 0.591);
+    font-size: 0.7rem;
+  }
+
+  .now-playing a {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.863);
+  }
+  .now-playing h4 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main-box1 {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+    opacity: 0;
+  }
+  #close-btn {
+    opacity: 1;
+    display: block;
+  }
+  .main-box2 {
+    width: 100vw;
+    margin-left: 0;
+  }
+  #a-slider {
+    width: 100%;
+  }
+  .toggle-btn {
+    display: block;
+  }
+  .now-playing a {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.863);
+  }
+  #currentAlbumCover {
+    width: 40px;
+    height: 40px;
+    margin-left: 3px;
+    margin-right: 6px;
+  }
+  .now-playing {
+    width: 170px;
+  }
+  .country p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1135px) {
+  .now-playing a {
+    font-size: 6px;
+    color: rgba(255, 255, 255, 0.863);
+  }
+  #currentAlbumCover {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1px;
+    margin-right: 6px;
+    margin-left: 3px;
+  }
+}
+
+@media (max-width: 935px) {
+  .now-playing {
+    width: 160px;
+  }
+  .last > :nth-child(1) {
+    display: none;
+  }
+
+  .home {
+    height: 48px;
+    width: 48px;
+    margin: 6px;
+  }
+  .nav input {
+    width: 20vw;
+    height: 35px;
+  }
+  #middle {
+    height: 35px;
+  }
+  #middle div {
+    height: 35px;
+  }
+  #middle i {
+    width: 18px;
+  }
+  .logo {
+    height: 45px;
+    width: 45px;
+  }
+  .link {
+    margin: 20px 0 0 20px;
+  }
+  .link a {
+    font-size: 20px;
+  }
+  .footer-bottom-sec {
+    width: 100%;
+    margin: 40px 40px 20px 0px;
+    padding-left: 10px;
+  }
+  .bottom-link {
+    display: none;
+  }
+  .play-box {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.5s ease;
+  }
+  .play-control {
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 17px;
+  }
+  .now-playing {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .progress-container {
+    bottom: 60px;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    position: fixed;
+  }
+  .volume {
+    display: none;
+  }
+  #seekBar {
+    margin-top: 12px;
+  }
+  .country p {
+    margin-top: 100px;
+  }
+  .footer {
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+  }
+  .footer span {
+    font-size: 15px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top-link {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .link a {
+    font-size: 17px;
+  }
+  .now-playing {
+    width: 150px;
+  }
+  .nav-input,
+  .nav-img {
+    display: none;
+  }
+  #middle div {
+    background-color: black;
+  }
+  #middle div {
+    margin-left: 0;
+  }
+  #middle h6 {
+    display: block;
+  }
+  #middle i {
+    font-size: 16px;
+  }
+  .main-box2-nav div {
+    margin-left: 5px;
+    justify-content: space-between;
+  }
+  .a-now-playing-info {
+    padding-right: 10px;
+  }
+}
+.main-box2-nav div > button {
+  font-size: 14px;
+  font-family: helvetica;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+@media (max-width: 450px) {
+  .now-playing a {
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.863);
+  }
+  .now-playing h4 {
+    font-size: 10px;
+  }
+}
+.control-footer input {
+  margin-bottom: 2px;
+}
+@media (max-width: 400px) {
+  .main-box2-nav div {
+    gap: 5px;
+  }
+  /* .podcast {
+    display: none;
+  } */
+}

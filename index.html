@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music By Neeraj: My Songs for everyone</title>
+    <link rel="icon" type="image/x-icon" href="me3.png" class="fav" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fixed.css" />
+    <link rel="stylesheet" href="media.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="nav flex justify-content-space align-item">
+      <button class="bg-non home">
+        <i class="fa-solid fa-house invert"></i>
+      </button>
+      <div class="flex justify-content-space align-item" id="middle">
+        <div class="flex justify-content-space align-item bg2 b-radius m-left">
+          <i class="fa-solid fa-magnifying-glass m-2" style="color: white"></i>
+          <h6>Search</h6>
+          <input
+            class="bg-non m-2 bg2 nav-input"
+            type="text"
+            placeholder="What do you want to play?"
+          />
+          <img
+            class="invert m-2 nav-img"
+            src="img/browes.svg"
+            alt=""
+            style="width: 23px"
+          />
+        </div>
+      </div>
+      <div class="last flex justify-content-space align-item p-2">
+        <button class="btn bg-non font-bold bthover">Explore Premium</button>
+        <button class="btn bg0 bg-non invert">Install App</button>
+        <i class="fa-regular fa-bell btn" style="color: white"></i>
+        <div class="logo" id="profile">
+          <img src="me.jpeg" alt="" id="profileImage" />
+        </div>
+      </div>
+    </div>
+    <div class="container flex">
+      <div class="main-box1 bg1" id="leftBox">
+        <div class="main-box1-nav bg1 flex justify-content-space align-item">
+          <div class="head flex justify-content-space align-item bg1">
+            <div class="div flex align-item">
+              <svg
+                data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                class="Svg-sc-ytk21e-0 bneLcE invert"
+              >
+                <path
+                  d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                ></path>
+              </svg>
+              <button class="library-btn bg0 bg-non btn font-dark">
+                Your Library
+              </button>
+            </div>
+            <div class="div flex align-item">
+              <h6 id="closeBtn">Close</h6>
+              <button class="btn bg0 bg-non" id="close-btn">
+                <i class="fa-solid fa-xmark" style="color: #ffffffae"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div>
+            <section class="bg2">
+              <div class="">
+                <span>Creat your first playlist</span>
+                <span class="font-nobolt">It's easy,we'll help you</span>
+              </div>
+              <div class="">
+                <button class="btn bg-non bthover">Creat playlist</button>
+              </div>
+            </section>
+          </div>
+          <div class="sidebar1 bg1">
+            <div id="sidebar" class="sidebar">
+              <ul id="songList"></ul>
+              <div class="stoper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="seperate"></div> -->
+      <div class="main-box2 bg2">
+        <div class="main-box2-nav">
+          <div class="flex align-item">
+            <button class="toggle-btn bg0 btn bg-non" onclick="toggleLeftBox()">
+              <i class="fa-solid fa-right-left" style="color: #ffffffae"></i>
+            </button>
+            <button class="btn bg-non">All</button>
+            <button class="btn bg-non m-left bg3">Music</button>
+            <button class="podcast btn bg-non m-left bg3">Podcasts</button>
+          </div>
+        </div>
+        <!-- slidebar -->
+        <div id="a-slider">
+          <div class="a-now-playing">
+            <img
+              id="a-currentAlbumCover"
+              src="img/download.png"
+              crossorigin="anonymous"
+              alt=""
+            />
+            <div class="a-now-playing-info">
+              <h4 id="a-currentSongTitle"></h4>
+              <a id="a-currentSongArtist"></a>
+            </div>
+          </div>
+        </div>
+        <section class="section-one">
+          <div>
+            <div class=""><h2 class="m-2 disturb">Recommended for you</h2></div>
+          </div>
+          <div class="cartContainer flex">
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart19.jpeg" alt="" />
+                <button class="play-button">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+              </div>
+              <div class="">
+                <span>English Vibe.....</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/friend.jpg" alt="" />
+              </div>
+              <div class="">
+                <span>Dhanda Nyoliwala ....</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart3.png" alt="" />
+              </div>
+              <div class="">
+                <span
+                  >The finest set of Telugu music from the past 10 years. Cover
+                  : Hi Nanna</span
+                >
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart4.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Best of the Indian Indie scene. Cover - Gini</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart5.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span
+                  >Finest collection of Tamil Music from the past 10 years Cover
+                  : Jailer</span
+                >
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart6.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Ultimate 101 Punjabi Hits with Navaan Sandhu</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart7.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span
+                  >Bollywood Central, jab baje toh seedha dil ke centre mein
+                  lage 🫶🏼 Cover - Teri Baaton Mein Aisa Uljha Jiya</span
+                >
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart8.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span
+                  >Hottest tracks from your favourite I-Pop Icons. Cover- Vishal
+                  Mishra</span
+                >
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart9.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span
+                  >Most exciting artists from the Indian Indie scene. Cover:
+                  Osho Jain</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section two -->
+        <section class="m-top">
+          <div>
+            <div class=""><h2 class="m-2">favourite</h2></div>
+          </div>
+          <div class="cartContainer flex">
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart10-1.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Bintu Pabra Songs ....</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="laddiAlbum/s1.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Laddi Chahal Songs ...</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart12.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Pretty Lonesome with Madeline Argy</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart13.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>جافکری | Jafekri</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart14.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Distractible</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart15.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Vision 100</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart16.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Finshots Daily</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart17.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>The Kardasim Podcast</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-image">
+                <img src="img/cart18.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span
+                  >Easy German: Learn German with native speakers | Deutsch
+                  lernen mit Muttersprachlern</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="m-top">
+          <div>
+            <div class=""><h2 class="m-2">Featured Charts</h2></div>
+          </div>
+          <div class="cartContainer flex align-item">
+            <div class="cart2">
+              <div class="cart-image">
+                <img src="shubhAlbum/shubhA.jpg" alt="" />
+              </div>
+              <div class="">
+                <span>Shubh Fev. Songs..</span>
+              </div>
+            </div>
+            <div class="cart2">
+              <div class="cart-image">
+                <img src="sidhuAlbum/sidhu.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Sidhu Moose Wala..</span>
+              </div>
+            </div>
+            <div class="cart2">
+              <div class="cart-image">
+                <img src="bollywoodAlbum/b.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Top Hindi Bollywood.</span>
+              </div>
+            </div>
+            <div class="cart2">
+              <div class="cart-image">
+                <img src="slowedAlbum/lofi.jpeg" alt="" />
+              </div>
+              <div class="">
+                <span>Slowed Lofi Songs..</span>
+              </div>
+            </div>
+            <div class="cart2">
+              <div class="cart-image">
+                <img src="img/cart23.jpg" alt="" />
+              </div>
+              <div class="">
+                <span
+                  >Your daily update of the most played tracks right now -
+                  Global.</span
+                >
+              </div>
+            </div>
+            <div class="cart2">
+              <div class="cart-image">
+                <img src="img/cart24.jpg" alt="" />
+              </div>
+              <div class="">
+                <span
+                  >Your daily update of the most played tracks right now -
+                  Global.</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="footer-div">
+          <div class="footer-top-sec flex">
+            <div class="footer-top-link flex">
+              <div class="link">
+                <a id="english" href="">Best Of English</a>
+                <a id="dhanda" href="">Dhanda Nyoliwala Songs</a>
+                <a id="Bintu" href=""> Bintu Pabra Songs</a>
+                <a id="laddi" href=""> Best Of Laddi Chahal</a>
+              </div>
+              <div class="link">
+                <a id="shubh" href=""> Shubh Most Papuler Songs</a>
+                <a id="sidhu" href="">Sidhu Mossse wala Songs</a>
+                <a id="hindi" href=""> Top Hindi Bollywood</a>
+                <a id="lofi" href=""> Top Hindi Lofi Songs Slowed</a>
+              </div>
+              <div class="link">
+                <a href="#">Useful links</a>
+                <a href="#"> Support </a>
+                <a href="#"> Free Mobile App </a>
+                <a href="#"> Vendors</a>
+              </div>
+              <div class="link">
+                <a href="#">Premium Individual</a>
+                <a href="#"> Premium Duo </a>
+                <a href="#">Premium Family </a>
+                <a href="#"> Premium Student </a>
+                <a href="#"> Stay Safe</a>
+              </div>
+            </div>
+            <div class="footer-social-link flex">
+              <div class="insta"></div>
+              <div class="twitter"></div>
+              <div class="fecbook"></div>
+            </div>
+          </div>
+
+          <div class="footer-bottom-sec flex justify-content-space align-item">
+            <div class="bottom-link flex justify-content-space align-item">
+              <a href="#">Legal</a>
+              <a href="#">Safety & Privacy Center</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">About Ads</a>
+              <a href="#">Accessibility</a>
+            </div>
+            <div class="country">
+              <p>&#169;&nbsp;2024 Music By Neeraj. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-last"></div>
+      </div>
+    </div>
+    <div class="play-box flex justify-content-space align-item">
+      <div class="now-playing">
+        <img
+          id="currentAlbumCover"
+          src="img/download.png"
+          crossorigin="anonymous"
+          alt=""
+        />
+        <div class="now-playing-info">
+          <h4 id="currentSongTitle"></h4>
+          <a id="currentSongArtist"></a>
+        </div>
+      </div>
+      <div class="play-control flex align-item justify-content">
+        <div class="control-uper flex justify-content align-item">
+          <i id="prevSong" class="fa-solid fa-backward-step"></i>
+          <i id="playPause" class="fa-solid fa-play"></i>
+          <i id="nextSong" class="fa-solid fa-forward-step"></i>
+        </div>
+        <div class="control-footer flex align-item justify-content">
+          <input type="range" id="seekBar" min="0" value="0" />
+          <div class="progress-container">
+            <div id="timeline"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span id="startTime">0:00</span>
+        <span>/</span>
+        <span id="endTime">0:00</span>
+        <!-- End time -->
+      </div>
+      <div class="volume">
+        <img class="invert" src="/img/volume.svg" alt="" />
+        <input
+          type="range"
+          id="volumeControl"
+          min="0"
+          max="1"
+          step="0.1"
+          value="1"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="new.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+  </body>
+</html>
